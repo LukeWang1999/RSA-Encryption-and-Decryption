@@ -15,13 +15,13 @@ list_ASCII = [None,None,None,None,None,None,None,None,None,None,None,None,None,N
              '{','|','}','~',None
              ]
 print('Please wait while we attempt to brute force decryt your text...')
-path = 'C:/Users/IN3LABS/Desktop/Lessons and Curriculum/Python.luke/CRYP/What you give the third party/EncryptKey.txt'
+path = 'C:/path/EncryptKey.txt'
 D = open(path,"r")
 keylist = []
 F = D.read()
 keylist = F.split('\n')
 SPK = int(keylist[0])
-path2 = 'C:/Users/IN3LABS/Desktop/Lessons and Curriculum/Python.luke/CRYP/Paste encryted text file here/EncryptedMessage.txt'
+path2 = 'C:/path2/EncryptedMessage.txt'
 G = open(path2,"r")
 L = G.read()
 Break = False
@@ -69,12 +69,12 @@ def decrypt(L,PK,SPK):
         for x in range(len(List2)):
             A = int(List2[x])
             L += list_ASCII[pow(A,PK,SPK)]
-        f= open("C:/Users/IN3LABS/Desktop/Lessons and Curriculum/Python.luke/CRYP/DecryptedMessage.txt","a+")
+        f= open("C:/path/DecryptedMessage.txt","a+")
         f.write(L)
         f.close()
         Break = True
     except:
-        f= open("C:/Users/IN3LABS/Desktop/Lessons and Curriculum/Python.luke/CRYP/DecryptedMessage.txt","a+")
+        f= open("C:/path2/DecryptedMessage.txt","a+")
         f.write('')
         f.close()
         try:
