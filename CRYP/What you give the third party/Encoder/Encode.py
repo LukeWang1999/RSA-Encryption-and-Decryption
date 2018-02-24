@@ -49,8 +49,8 @@ def encrypt(L):
     f= open("EncryptedMessage.txt","w+")
     f.write(L)
     f.close()
-path = 'C:/Users/IN3LABS/Desktop/Lessons and Curriculum/Python.luke/CRYP/What you give the third party/EncryptKey.txt'
-path2 = 'C:/Users/IN3LABS/Desktop/Lessons and Curriculum/Python.luke/CRYP/What you give the third party/Encoder/Message You want to Encrypt.txt'
+path = 'C:/path/EncryptKey.txt'
+path2 = 'C:/path2/Message You want to Encrypt.txt'
 D = open(path,"r")
 S = open(path2,"r")
 L = S.read()
