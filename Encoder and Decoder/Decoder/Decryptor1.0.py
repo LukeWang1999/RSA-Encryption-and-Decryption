@@ -71,11 +71,11 @@ def decrypt(L):
                 N **= 2
         L += list_ASCII[N % SPK]
 
-    f= open("C:/Users/IN3LABS/Desktop/Lessons and Curriculum/Python.luke/CRYP/DecryptedMessage.txt","w+")
+    f= open("C:/path/DecryptedMessage.txt","w+")
     f.write(L)
     f.close()
 
-path = 'C:/Users/IN3LABS/Desktop/Lessons and Curriculum/Python.luke/Encoder and Decoder/Key Generator/EncryptKey.txt'
+path = 'C:/path/EncryptKey.txt'
 D = open(path,"r")
 keylist = []
 F = D.read()
@@ -83,10 +83,10 @@ keylist = F.split('\n')
 
 SPK = int(keylist[0])
 PK = int(keylist[2])
-path2 = 'C:/Users/IN3LABS/Desktop/Lessons and Curriculum/Python.luke/CRYP/Paste encryted text file here/EncryptedMessage.txt'
+path2 = 'C:/path/EncryptedMessage.txt'
 G = open(path2,"r")
 L = G.read()
 decrypt(L)
 
-os.remove("C:/Users/IN3LABS/Desktop/Lessons and Curriculum/Python.luke/CRYP/Paste encryted text file here/EncryptedMessage.txt")
+os.remove("C:/path/EncryptedMessage.txt")
 quit()
